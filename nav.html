@@ -28,32 +28,6 @@
         <script src="/js/utils/validation.js" th:src="@{/js/utils/validation.js}"></script>
         <script src="/js/utils/intl-tel.js" th:src="@{/js/utils/intl-tel.js}"></script>
         <script src="/js/utils/countries.js" th:src="@{/js/utils/countries.js}"></script>
-        <!-- Radio button checker -->
-        <script>
-           const resultObj = {radio: 'free', checkbox: 'red', tags: ['dog', 'cat', 'duck'], date: '01/01/2023', startDate: '01/01/2023', endDate: '12/31/2023' }
-            
-           console.log(resultObj)
-
-            let testObject = []
-
-            const button = document.getElementById("adder")
-            const radio = document.getElementById("radio")
-            const checkbox = document.getElementById("checkbox")
-            const date = document.getElementById("date")
-            const startDate = document.getElementById("startDate")
-            const endDate = document.getElementById("endDate")
-
-            button.addEventListener("click", function() {
-            testObject.push({
-                radio: radio.value,
-                checkbox: checkbox.value,
-                date: date.value,
-                startDate: startDate.value,
-                endDate: endDate.value
-            })
-            console.log(testObject)
-            })
-        </script>
 </head>
   <body>
   
@@ -288,5 +262,26 @@
             </div>
         </nav>
     </div>
+    <script>
+         let testObject = []
+
+            const button = document.getElementById("adder")
+            const radio = document.getElementById("radio")
+            const checkbox = document.getElementById("checkbox")
+            const date = document.getElementById("date")
+            const startDate = document.getElementById("startDate")
+            const endDate = document.getElementById("endDate")
+
+            button.addEventListener("click", function() {
+            testObject.push({
+                radio: radio.value,
+                checkbox: checkbox.value,
+                date: date.value,
+                startDate: startDate.value,
+                endDate: endDate.value
+            })
+            console.log(testObject)
+            })
+    </script>
   </body>
 </html>
