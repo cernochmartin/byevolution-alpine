@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="/imgs/favicon.ico" th:href="@{/imgs/favicon.ico}">
+        <!-- Alpine Plugins -->
+        <script defer src="/libs/alpinejs/morph/3.11.1/release.min.js" th:href="@{/libs/alpinejs/morph/3.11.1/release.min.js}"></script>
+        <script defer src="/libs/alpinejs/component/1.1.4/release.min.js" th:href="@{/libs/alpinejs/component/3.11.1/release.min.js}"></script>
+        <script defer src="/libs/alpinejs/mask/3.10.5/release.min.js" th:href="@{/libs/alpinejs/mask/3.11.1/release.min.js}"></script>
+        <!-- Alpine JS -->
+        <script defer src="/libs/alpinejs/3.10.5/release.min.js" th:src="@{/libs/alpinejs/3.10.5/release.min.js}"></script>
+        <!-- HTMX -->
+        <script defer src="/libs/htmx/1.8.4/htmx.min.js" th:src="@{/libs/htmx/1.8.4/htmx.min.js}"></script>
+        <!-- Tailwind CSS -->
+        <script src="/libs/tailwindcss/3.2.6/release.min.js" th:src="@{/libs/tailwindcss/3.2.6/release.min.js}"></script>
+        <script src="/js/tailwind.config.js" th:href="@{/js/tailwind.config.js}"></script>
+        <!-- Common CSS -->
+        <link rel="stylesheet" href="/css/style.css" th:href="@{/css/style.css}">
+        <!-- Common JS -->
+        <script src="/js/script.js" th:src="@{/js/script.js}"></script>
+        <title th:text="#{app}">NDL Privus</title>
+        <script src="/libs/validator/13.9.0/validator.min.js" th:src="@{/libs/validator/13.9.0/validator.min.js}"></script>
+        <link rel="stylesheet" href="/libs/intl-tel-input-17.0.19/css/intlTelInput.css" th:href="@{/libs/intl-tel-input-17.0.19/css/intlTelInput.css}">
+        <script src="/libs/intl-tel-input-17.0.19/js/intlTelInput.js" th:src="@{/libs/intl-tel-input-17.0.19/js/intlTelInput.js}"></script>
+        <script src="/js/utils/validation.js" th:src="@{/js/utils/validation.js}"></script>
+        <script src="/js/utils/intl-tel.js" th:src="@{/js/utils/intl-tel.js}"></script>
+        <script src="/js/utils/countries.js" th:src="@{/js/utils/countries.js}"></script>
+</head>
+  <body>
+    <nav class="w-auto h-28 shadow">
+      <div class="flex items-center gap-20 text-3xl pl-10">
+        <img src="/imgs/logos/ndl.png" alt="NDL logo" width="260" />
+        <a href="sign.html">Sign</a>
+        <a href="verify.html">Verify</a>
+      </div>
+    </nav>
+     <article class="flex flex-col items-center gap-6 mt-32">
+      <h1 class="text-4xl">Verify me</h1>
+      <input type="file">
+      <button class="text-3xl">Verify</button>
+     </article>
+     <h2 class="text-3xl text-center mb-6 mt-32">
+      Result
+    </h2>
+     <article class="flex justify-center">
+      <div class="flex gap-20">
+        <div class="h-52 w-52 border">
+          <span>PDF</span>
+          <span class="block">preview</span>
+        </div>
+        <div>
+          <p class="text-lg">Name: John Doe</p>
+          <p class="text-lg">Size: 32 MB</p>
+          <button class="text-lg">Show certificators</button>
+          <p class="text-lg">Date: 04/17/2023</p>
+        </div>
+      </div>
+     </article>
+  </body>
+</html>
