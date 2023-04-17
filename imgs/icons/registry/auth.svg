@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" stroke="#1a1a1a" stroke-width="15">
+<path d="m244.94,284.94c-9.64,0-17.45-7.81-17.45-17.45v-84.26c0-9.64,7.81-17.45,17.45-17.45h111.91v-89.36H79.4v320.85h277.45v-112.34h-111.91Z" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="227.49" y="165.79" width="205.11" height="119.15" rx="17.45" ry="17.45" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="227.49 180.48 330.04 227.7 432.6 180.48" fill="none" stroke-linecap="round" stroke-linejoin="round"/><g>
+<line x1="244.94" y1="284.94" x2="151.74" y2="284.94" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="128.77" y1="284.94" x2="116.85" y2="284.94" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g><g>
+<line x1="128.77" y1="216.85" x2="116.85" y2="216.85" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="199.9" y1="216.85" x2="153.88" y2="216.85" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g><g>
+<line x1="199.9" y1="250.89" x2="187.99" y2="250.89" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="164.97" y1="250.89" x2="135.71" y2="250.89" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g><g>
+<path d="m79.4,477.7c0,10.11,8.19,18.3,18.3,18.3h240.85c10.11,0,18.3-8.19,18.3-18.3v-80.43H79.4v80.43Z" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="m338.55,16H97.7c-10.11,0-18.3,8.19-18.3,18.3v42.13h277.45v-42.13c0-10.11-8.19-18.3-18.3-18.3Z" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg>

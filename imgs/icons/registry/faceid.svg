@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" stroke="#1a1a1a" stroke-width="15">
+    <circle cx="256" cy="256" r="62.7" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="256" cy="256" r="182.72" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <g>
+        <polyline points="352.29 229.57 352.29 165.08 282.42 165.08" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        <polyline points="229.57 165.08 159.71 165.08 159.71 229.57" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        <polyline points="159.71 282.42 159.71 346.91 229.57 346.91" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        <polyline points="282.42 346.91 352.29 346.91 352.29 282.42" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <g>
+        <path d="m51.52,130.27C3.24,208.66,4.17,308.74,54.36,386.27" fill="none" stroke-dasharray="0 0 0 0 0 0 34 10 3 10 3 10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="m386.27,54.36C312.6,6.66,218.56,3.45,142.13,44.69" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="383.77" cy="462.51" r="25.83" fill="none"  stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="118.31" cy="59.4" r="25.83" fill="none"  stroke-linecap="round" stroke-linejoin="round" />
+        <path d="m452.59,393.69c56.83-80.95,57.87-189.11,3.03-271.03" fill="none" stroke-dasharray="0 0 0 0 0 0 37 10 3 10 3 10" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="m122.66,455.63c70.35,47.1,160.07,52.98,235.28,17.7" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <g>
+        <line x1="282.42" y1="234" x2="282.42" y2="244.85" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        <line x1="229.57" y1="234" x2="229.57" y2="244.85" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        <polyline points="258.19 235.16 258.19 264.93 248.73 264.93" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="m234.56,277.16c5.43,5.66,13.02,9.22,21.48,9.22s16.06-3.56,21.48-9.22" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+</svg>

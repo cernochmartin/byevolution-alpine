@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" stroke="#345d9d" stroke-width="30">
+    <path d="m243.24,128.85l-48.19-30.35c-5.35-3.37-11.55-5.16-17.87-5.16h-90.46v40.66h0v256.79c0,15.39-12.47,27.86-27.86,27.86h390.13c17.68,0,32.01-14.33,32.01-32.01v-252.65s-219.89,0-219.89,0c-6.32,0-12.52-1.79-17.87-5.16Z" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m31,113.1h55.73v278.56c0,14.9-12.1,27-27,27h-1.72c-14.9,0-27-12.1-27-27V113.1h0Z" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="135.35" y1="321.63" x2="223.23" y2="321.63" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="135.35" y1="369.16" x2="179.29" y2="369.16" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

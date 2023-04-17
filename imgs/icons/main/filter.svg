@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" stroke="#5B7CA3" stroke-width="40">
+    <line x1="441.65" y1="256" x2="473.5" y2="256" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="38.5" y1="256" x2="350.69" y2="256" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="396.17" cy="256" rx="45.48" ry="44.07" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="173.64" y1="82.57" x2="473.5" y2="82.57" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="38.5" y1="82.57" x2="82.69" y2="82.57" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="128.16" cy="82.57" rx="45.48" ry="44.07" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="285.26" y1="429.43" x2="473.5" y2="429.43" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="38.5" y1="429.43" x2="194.3" y2="429.43" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="239.78" cy="429.43" rx="45.48" ry="44.07" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

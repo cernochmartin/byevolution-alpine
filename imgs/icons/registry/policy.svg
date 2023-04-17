@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" stroke="#1a1a1a" stroke-width="15">
+    <path d="m200.68,16h-101c-18.75,0-33.95,15.2-33.95,33.95v66.64c0,3.24,2.63,5.87,5.87,5.87h60.35c3.24,0,5.87,2.63,5.87,5.87v289.17c0,3.24,2.63,5.87,5.87,5.87h296.72c3.24,0,5.87-2.63,5.87-5.87V49.95c0-18.75-15.2-33.95-33.95-33.95h-211.64Z" fill="none" stroke-miterlimit="10"/>
+    <path d="m101.58,16h.38c19.79,0,35.85,16.06,35.85,35.85v70.6h-72.08V51.85c0-19.79,16.06-35.85,35.85-35.85Z" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="424.4 496 292.21 471.62 160.02 496 160.02 423.36 424.4 423.36 424.4 496" fill="none" stroke-linejoin="round"/>
+    <g>
+        <line x1="216.67" y1="99.67" x2="317.55" y2="99.67" fill="none" stroke-linecap="round" stroke-miterlimit="10"/>
+        <line x1="346.71" y1="99.67" x2="367.75" y2="99.67" fill="none" stroke-linecap="round" stroke-miterlimit="10"/>
+    </g>
+    <g>
+        <line x1="367.75" y1="147" x2="266.87" y2="147" fill="none" stroke-linecap="round" stroke-miterlimit="10"/>
+        <line x1="237.71" y1="147" x2="216.67" y2="147" fill="none" stroke-linecap="round" stroke-miterlimit="10"/>
+    </g>
+    <g>
+        <line x1="367.75" y1="241.66" x2="266.87" y2="241.66" fill="none" stroke-linecap="round" stroke-miterlimit="10"/>
+        <line x1="237.71" y1="241.66" x2="216.67" y2="241.66" fill="none" stroke-linecap="round" stroke-miterlimit="10"/>
+    </g>
+    <line x1="216.67" y1="193.37" x2="367.75" y2="193.37" fill="none" stroke-linecap="round" stroke-miterlimit="10"/>
+    <path d="m333.27,292.32v27.5c0,25.86-17.64,50.35-41.06,57.05-23.41-6.7-41.05-31.19-41.05-57.05v-27.5l41.05-18.24,41.06,18.24Z" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="273.58 323.07 286.45 335.36 310.84 310.75" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

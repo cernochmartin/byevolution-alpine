@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" stroke="#7a8294" stroke-width="30">
+    <path d="m398.64,430.02c-38.82,31.86-88.5,50.98-142.64,50.98-124.26,0-225-100.74-225-225,0-54.14,19.12-103.82,50.98-142.64" fill="none"  stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m125.89,72.41c36.73-26.08,81.63-41.41,130.11-41.41,124.26,0,225,100.74,225,225,0,48.48-15.33,93.38-41.41,130.11" fill="none"  stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m356.62,387.75c-27.9,21.34-62.78,34.02-100.62,34.02-91.55,0-165.77-74.22-165.77-165.77,0-37.84,12.68-72.72,34.02-100.62" fill="none"  stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m168.6,115.12c25.37-15.78,55.32-24.89,87.4-24.89,91.55,0,165.77,74.22,165.77,165.77,0,32.08-9.11,62.03-24.89,87.4" fill="none"  stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="256" y1="204.2" x2="256" y2="93.65" fill="none"  stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="36.04" y1="67.17" x2="449.33" y2="480.46" fill="none"  stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

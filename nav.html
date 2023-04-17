@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="/imgs/favicon.ico" th:href="@{/imgs/favicon.ico}">
+        <!-- Alpine Plugins -->
+        <script defer src="/libs/alpinejs/morph/3.11.1/release.min.js" th:href="@{/libs/alpinejs/morph/3.11.1/release.min.js}"></script>
+        <script defer src="/libs/alpinejs/component/1.1.4/release.min.js" th:href="@{/libs/alpinejs/component/3.11.1/release.min.js}"></script>
+        <script defer src="/libs/alpinejs/mask/3.10.5/release.min.js" th:href="@{/libs/alpinejs/mask/3.11.1/release.min.js}"></script>
+        <!-- Alpine JS -->
+        <script defer src="/libs/alpinejs/3.10.5/release.min.js" th:src="@{/libs/alpinejs/3.10.5/release.min.js}"></script>
+        <!-- HTMX -->
+        <script defer src="/libs/htmx/1.8.4/htmx.min.js" th:src="@{/libs/htmx/1.8.4/htmx.min.js}"></script>
+        <!-- Tailwind CSS -->
+        <script src="/libs/tailwindcss/3.2.6/release.min.js" th:src="@{/libs/tailwindcss/3.2.6/release.min.js}"></script>
+        <script src="/js/tailwind.config.js" th:href="@{/js/tailwind.config.js}"></script>
+        <!-- Common CSS -->
+        <link rel="stylesheet" href="/css/style.css" th:href="@{/css/style.css}">
+        <!-- Common JS -->
+        <script src="/js/script.js" th:src="@{/js/script.js}"></script>
+        <title th:text="#{app}">NDL Privus</title>
+        <script src="/libs/validator/13.9.0/validator.min.js" th:src="@{/libs/validator/13.9.0/validator.min.js}"></script>
+        <link rel="stylesheet" href="/libs/intl-tel-input-17.0.19/css/intlTelInput.css" th:href="@{/libs/intl-tel-input-17.0.19/css/intlTelInput.css}">
+        <script src="/libs/intl-tel-input-17.0.19/js/intlTelInput.js" th:src="@{/libs/intl-tel-input-17.0.19/js/intlTelInput.js}"></script>
+        <script src="/js/utils/validation.js" th:src="@{/js/utils/validation.js}"></script>
+        <script src="/js/utils/intl-tel.js" th:src="@{/js/utils/intl-tel.js}"></script>
+        <script src="/js/utils/countries.js" th:src="@{/js/utils/countries.js}"></script>
+        <!-- Radio button checker -->
+        <script>
+           const resultObj = {radio: 'free', checkbox: 'red', tags: ['dog', 'cat', 'duck'], date: '01/01/2023', startDate: '01/01/2023', endDate: '12/31/2023' }
+            
+           console.log(resultObj)
+
+            let testObject = []
+
+            const button = document.getElementById("adder")
+            const radio = document.getElementById("radio")
+            const checkbox = document.getElementById("checkbox")
+            const date = document.getElementById("date")
+            const startDate = document.getElementById("startDate")
+            const endDate = document.getElementById("endDate")
+
+            button.addEventListener("click", function() {
+            testObject.push({
+                radio: radio.value,
+                checkbox: checkbox.value,
+                date: date.value,
+                startDate: startDate.value,
+                endDate: endDate.value
+            })
+            console.log(testObject)
+            })
+        </script>
+</head>
+  <body>
+  
+    <div th:fragment="mainNav" 
+        x-data="">
+        <nav class="flex items-center flex-wrap py-2 px-6 bg-white border-b border-slate-300 h-[55px]">
+            <!-- Logo -->
+            <div class="flex items-center flex-shrink-0 w-[290px]" @click="window.location = $store.env._url+'home'">
+                <img src="/imgs/logos/ndl.png" alt="NDL" width="60px" height="auto">
+                <span class="font-semibold text-2xl ml-2">Privus</span>
+            </div>
+            <!-- Menu button for phone screen -->
+            <div class="block lg:hidden">
+                <button class="flex items-center px-3 py-2 border rounded hover:text-black">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                </button>
+            </div>
+            <!-- Menu -->
+            <div class="flex items-center justify-between w-[calc(100%-290px)]">
+                <!-- Search bar -->
+                <div class="w-full flex items-center bg-input-light rounded">
+                    <div class="py-1 px-3">
+                        <img src="/imgs/icons/main/roop.svg" alt="search" width="21px">
+                    </div>
+                    <input
+                        class="w-full bg-input-light text-base focus:outline-none"
+                        id="search" type="text" placeholder="Search in MyRecords">
+                    <!-- Filter dropdown -->
+                    <div x-data="{ open: false }">
+                        <button class="flex justify-end items-center pr-4" @click="open = ! open">
+                            <img src="/imgs/icons/main/filter.svg" alt="search" width="21px">
+                        </button>
+                        <div x-show="open" @click.outside="open = false">
+                            <div class="navDropdown pl-8">
+                                <div id="radio" x-data="{type: ''}" x-init="$watch('type', value => console.log(value))" class="flex gap-6">
+                                    <label class="
+                                    mt-4
+                                    block
+                                    w-6
+                                    h-6
+                                    rounded-full
+                                    cursor-pointer
+                                    bg-blue-300
+                                    hover:bg-blue-500 
+                                    transition
+                                    duration-500
+                                    ">
+                                    <input type="radio" id="free" value="Free" x-model="type" class="hidden">
+                                    </label>
+                                    <label class="
+                                    mt-4
+                                    block
+                                    w-6
+                                    h-6
+                                    rounded-full
+                                    cursor-pointer
+                                    bg-blue-300
+                                    hover:bg-blue-500 
+                                    transition
+                                    duration-500
+                                    ">
+                                    <input type="radio" id="audit" value="Audit" x-model="type" class="hidden">
+                                    </label>
+                                    <p class="mt-4 text-lg">Type selected: <span x-text="type"></span></p>
+                                  </div>
+                                  <div id="checkbox" x-data="{value: ''}" x-init="$watch('value', value => console.log(value))" class="flex gap-6">
+                                    <label class="
+                                    mt-4
+                                    block
+                                    w-6
+                                    h-6
+                                    rounded
+                                    cursor-pointer
+                                    bg-blue-300
+                                    hover:bg-blue-500 
+                                    transition
+                                    duration-500
+                                    ">
+                                        <input type="checkbox" value="red" x-model="value" class="">
+                                    </label>
+                                    <label class="
+                                    mt-4
+                                    block
+                                    w-6
+                                    h-6
+                                    rounded
+                                    cursor-pointer
+                                    bg-blue-300
+                                    hover:bg-blue-500 
+                                    transition
+                                    duration-500
+                                    ">
+                                        <input type="checkbox" value="blue" x-model="value" class="">
+                                    </label>
+                                    <label class="
+                                    mt-4
+                                    block
+                                    w-6
+                                    h-6
+                                    rounded
+                                    cursor-pointer
+                                    bg-blue-300
+                                    hover:bg-blue-500 
+                                    transition
+                                    duration-500
+                                    ">
+                                        <input type="checkbox" value="green" x-model="value" class="">
+                                    </label>
+                                    <p class="mt-4 text-lg">Checkbox selection: <span x-text="value"></span></p>
+                                  </div>
+                                  <div
+                                        id="tags"
+                                        class="mt-4"
+                                        x-data="{
+                                            search: '',
+                                            tags: ['dog', 'cat', 'bunny', 'duck'],
+                                            get filteredTags() {
+                                                return this.tags.filter(
+                                                    i => i.startsWith(this.search)
+                                                )
+                                            }
+                                        }"
+                                    >
+                                    <input x-model="search" placeholder="Search your tags here">
+                                     <ul class="mt-4 text-lg">
+                                        <li>Select tags:</li>
+                                        <template x-for="tags in filteredTags" :key="tags">
+                                            <li x-text="tags"></li>
+                                        </template>
+                                    </ul>
+                                  </div>
+                                  <div id="date" class="mt-4">
+                                    <label class="text-lg">Input date:
+                                        <input type="date" value="2023-01-01" min="2023-01-01" max="2030-12-31" class="text-lg">
+                                    </label>
+                                  </div>
+                                  <div class="mt-4">
+                                    <label id="startDate" class="text-lg">Input start date:
+                                        <input type="date" id="start" value="2023-01-01" min="2023-01-01" max="2030-12-31" class="text-lg">
+                                    </label>
+                                    <label id="endDate" class="text-lg pl-3">Input end date:
+                                        <input type="date" id="start" value="2023-01-01" min="2023-01-01" max="2030-12-31" class="text-lg">
+                                    </label>
+                                  </div>
+                                <div class="flex justify-center ">  
+                                    <button id="adder" type="submit" class="bg-blue-300 w-auto p-2 hover:bg-blue-500 transition
+                                    duration-500 rounded text-white text-xl">
+                                        <span>Submit</span>
+                                    </button>  
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Options -->
+                <div class="lg:flex lg:items-center flex-shrink-0 ml-40">
+                    <div class="relative" x-data="{toggle:false}">
+                        <div class="p-3 cursor-pointer" @click="toggle = !toggle;" @click.away="toggle = false">
+                            <img src="/imgs/icons/main/nav/bell.svg" alt="notification" width="20px" height="auto">
+                        </div>
+                        <template x-if="toggle">
+                            <div class="navDropdown w-96" id="notification">
+                                <template x-for="m in user.messages">
+                                    <div class="flex items-center py-3 cursor-pointer border-y border-primary-light">
+                                        <div class="px-3">
+                                            <img :src="m.icon" alt="" width="35px" height="auto">
+                                        </div>
+                                        <div>
+                                            <p class="text-base" x-text="m.message"></p>
+                                            <p class="text-xs text-gray-darker mt-1" x-text="formatDate(m.date)"></p>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="relative" x-data="{toggle:false}">
+                        <div class="p-3 cursor-pointer" @click="toggle = !toggle;" @click.away="toggle = false">
+                            <img src="/imgs/icons/main/nav/dashboard.svg" alt="apps" width="18px" height="auto">
+                        </div>
+                        <template x-if="toggle">
+                            <div class=" navDropdown w-48 py-7" id="apps">
+                                <div class="apps">
+                                    <div class="text-center w-full">
+                                        <img src="/imgs/logos/box.svg" alt="Boxes" width="35px" height="auto" class="mx-auto">
+                                        <p class="text-xs text-gray-darker">Boxes</p>
+                                    </div>
+                                    <div class="text-center w-full">
+                                        <img src="/imgs/logos/record.svg" alt="Records" width="35px" height="auto" class="mx-auto">
+                                        <p class="text-xs text-gray-darker">Records</p>
+                                    </div>
+                                    <div class="text-center w-full">
+                                        <img src="/imgs/logos/mail.png" alt="Messages" width="35px" height="auto" class="mx-auto">
+                                        <p class="text-xs text-gray-darker">Messages</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="relative" x-data="{toggle:false}">
+                        <div class="px-5 py-3 cursor-pointer" @click="toggle = !toggle;" @click.away="toggle = false">
+                            <p class="text-bye-blue font-semibold" >John Doe</p>
+                        </div>
+                        <template x-if="toggle">
+                            <div class="navDropdown w-60" id="user" >
+                                <div class="flex items-center pb-3 mb-2 border-b border-primary-light">
+                                    <template x-if="user.icon!=null">
+                                        <div>
+                                            <img src="" alt="" width="30px" height="auto"> 
+                                        </div>  
+                                    </template>
+                                    <template x-if="user.icon==null">
+                                        <div class="bg-primary rounded-[20px] w-9 h-9 flex justify-center items-center mr-2 my-0 text-center uppercase text-[16px] font-semibold text-white tracking-tight" 
+                                            x-text="user.info.firstname.charAt(0)+user.info.lastname.charAt(0)">
+                                        </div>
+                                    </template>
+                                    <div>
+                                        <p th:text="anonymous_user" class="text-bye-blue">Anonymous user</p>
+                                        <p><a href="" class="text-sm">Upgrade</a></p>
+                                    </div>
+                                </div>
+                                <div class="p-2 cursor-pointer" @click="window.location = $store.env._url+'user'">
+                                    <p class="text-sm text-gray-darker">User configuration</p>
+                                </div>
+                                <div class="p-2 cursor-pointer">
+                                    <p class="text-sm text-gray-darker">Log out</p>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+  </body>
+</html>
