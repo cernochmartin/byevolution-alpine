@@ -18,6 +18,7 @@ tailwind.config = {
       '2xl': '20px',
       '3xl': '25px',
       '4xl': '30px',
+      '5xl': '64px',
     },
     extend: {
       colors: {

@@ -28,9 +28,18 @@
         <script src="/js/utils/validation.js" th:src="@{/js/utils/validation.js}"></script>
         <script src="/js/utils/intl-tel.js" th:src="@{/js/utils/intl-tel.js}"></script>
         <script src="/js/utils/countries.js" th:src="@{/js/utils/countries.js}"></script>
+        <style>
+          #input {
+            width: 700px;
+          }
+
+          #pdf {
+            width: 900px;
+          }
+        </style>
 </head>
-  <body>
-    <nav class="w-auto h-28 shadow">
+  <body class="bg-gray-100">
+    <nav class="w-auto h-28 shadow bg-white">
       <div class="flex items-center gap-20 text-3xl pl-10">
         <img src="/imgs/logos/ndl.png" alt="NDL logo" width="260" />
         <a href="sign.html">Sign</a>
@@ -38,29 +47,35 @@
       </div>
     </nav>
      <article class="flex flex-col items-center gap-6 mt-32">
-      <h1 class="text-4xl">Sign me</h1>
-      <input type="file" />
-      <button @click="open = ! open" class="text-3xl">Sign</button>
+      <h1 class="!text-5xl">Sign me</h1>
+      <input type="file" id="input" class="h-40 bg-white border-cyan-50 border flex items-center justify-center">
+      <button @click="open = ! open" class="text-3xl bg-gray-400 text-white px-16 py-1.5 border-radius">Sign</button>
      </article>
-     <div x-data="{ open: false }">
-      <div x-show="open">
-     <h2 class="text-3xl text-center mb-6 mt-32">
+     <section id="pdf" class="bg-white mx-auto mt-20">
+     <h2 class="text-3xl py-4 pl-6">
       Result
     </h2>
-     <article class="flex justify-center">
+    <hr class="h-0.5 mx-2 bg-gray-300">
+     <article class="flex justify-center pt-6">
       <div class="flex gap-20">
-        <div class="h-52 w-52 border">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="text-gray-500 text-xl">
+            <p>Name</p>
+            <p>Size</p>
+            <p class="text-black text-2xl font-semibold pt-4">50 Signers</p>
+            <button class="text-2xl bg-gray-400 text-white px-6 py-1.5 mt-4 border-radius">Download</button>
+          </div>
+          <div class="text-xl font-semibold">
+            <p>example.pdf</p>
+            <p>00.00 KB</p>
+          </div>
+        </div>
+        <div class="h-96 w-80 border">
           <span>PDF</span>
           <span class="block">preview</span>
         </div>
-        <div>
-          <p class="text-lg">Name: John Doe</p>
-          <p class="text-lg">Size: 32 MB</p>
-          <button class="text-lg">Show certificators</button>
-        </div>
       </div>
      </article>
-    </div>
-    </div>
+    </section>
   </body>
 </html>
