@@ -48,8 +48,8 @@
     </nav>
      <article class="flex flex-col items-center gap-6 mt-32">
       <h1 class="!text-5xl">Sign me</h1>
-      <input type="file" id="input" class="h-40 bg-white border-cyan-50 border flex items-center justify-center">
-      <button @click="open = ! open" class="text-3xl bg-gray-400 text-white px-16 py-1.5 border-radius">Sign</button>
+      <input type="file" id="input" class="h-20 xl:h-40 bg-white border-cyan-50 border flex items-center justify-center">
+      <button @click="open = !open" class="text-3xl bg-gray-400 text-white px-16 py-1.5 border-radius">Sign</button>
      </article>
      <section id="pdf" class="bg-white mx-auto mt-20">
      <h2 class="text-3xl py-4 pl-6">
@@ -63,7 +63,7 @@
             <p>Name</p>
             <p>Size</p>
             <p class="text-black text-2xl font-semibold pt-4">50 Signers</p>
-            <button class="text-2xl bg-gray-400 text-white px-6 py-1.5 mt-4 border-radius">Download</button>
+            <button type="submit" class="text-2xl bg-gray-400 text-white px-6 py-1.5 mt-4 border-radius">Download</button>
           </div>
           <div class="text-xl font-semibold">
             <p>example.pdf</p>
