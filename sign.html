@@ -29,53 +29,113 @@
         <script src="/js/utils/intl-tel.js" th:src="@{/js/utils/intl-tel.js}"></script>
         <script src="/js/utils/countries.js" th:src="@{/js/utils/countries.js}"></script>
         <style>
-          #input {
-            width: 700px;
+
+          @media (max-width: 992px){
+            .ndl_logo {
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .anchor {
+              display: none;
+            }
+          }
+       
+          @media (min-width: 1280px) {
+            .hamburger {
+              display: none;
+            }
+            #drop_zone {
+              width: 700px;
+            }
+            #pdf {
+              width: 900px;
+            }
           }
 
-          #pdf {
-            width: 900px;
-          }
         </style>
 </head>
   <body class="bg-gray-100">
     <nav class="w-auto h-28 shadow bg-white">
-      <div class="flex items-center gap-20 text-3xl pl-10">
-        <img src="/imgs/logos/ndl.png" alt="NDL logo" width="260" />
-        <a href="sign.html">Sign</a>
-        <a href="verify.html">Verify</a>
+      <div class="xl:flex items-center pt-6 gap-20 text-3xl xl:pl-10">
+        <div x-data="{ open: false }">
+        <button @click="open = !open" class="hamburger absolute left-4 top-11">
+          <img src="/imgs/logos/more.svg" alt="Hamburger menu">
+        </button>
+        <div x-show="open">
+          <div class="absolute top-28 bg-white w-full h-40 flex flex-col items-center gap-3 text-gray-400">
+            <a href="sign.html">Sign</a>
+            <hr class="h-0.5 w-32 bg-gray-400">
+            <a href="verify.html">Verify</a>
+            <hr class="h-0.5 w-32 bg-gray-400">
+          </div>
+        </div>
+      </div>
+        <img src="/imgs/logos/ndl.png" class="ndl_logo" alt="NDL logo" width="140" />
+        <a href="sign.html" class="anchor !text-4xl">Sign</a>
+        <a href="verify.html" class="anchor !text-4xl">Verify</a>
       </div>
     </nav>
-     <article class="flex flex-col items-center gap-6 mt-32">
+     <article class="flex flex-col items-center gap-6 mt-16 xl:mt-32">
       <h1 class="!text-5xl">Sign me</h1>
-      <input type="file" id="input" class="h-20 xl:h-40 bg-white border-cyan-50 border flex items-center justify-center">
-      <button @click="open = !open" class="text-3xl bg-gray-400 text-white px-16 py-1.5 border-radius">Sign</button>
+      <input type="file" id="drop_zone"
+      ondrop="dropHandler(event)"
+      ondragover="dragOverHandler(event)" class="h-20 xl:h-40 bg-white border flex items-center justify-center">
+      <div x-data="{ open: false }">
+      <button @click="open = !open" type="submit" class="text-3xl bg-gray-400 text-white px-16 py-1.5">Sign</button>
+      <div x-show="open">
      </article>
      <section id="pdf" class="bg-white mx-auto mt-20">
      <h2 class="text-3xl py-4 pl-6">
       Result
     </h2>
     <hr class="h-0.5 mx-2 bg-gray-300">
-     <article class="flex justify-center pt-6">
-      <div class="flex gap-20">
+     <article class="pl-7 xl:flex justify-center pt-6">
+      <div class="xl:flex gap-20">
         <div class="grid grid-cols-2 gap-4">
           <div class="text-gray-500 text-xl">
             <p>Name</p>
             <p>Size</p>
             <p class="text-black text-2xl font-semibold pt-4">50 Signers</p>
-            <button type="submit" class="text-2xl bg-gray-400 text-white px-6 py-1.5 mt-4 border-radius">Download</button>
+            <button type="submit" class="text-2xl bg-gray-400 text-white px-6 py-1.5 mt-4">Download</button>
           </div>
           <div class="text-xl font-semibold">
             <p>example.pdf</p>
             <p>00.00 KB</p>
           </div>
         </div>
-        <div class="h-96 w-80 border">
+        <div class="max-md:mt-6 h-96 w-80 border">
           <span>PDF</span>
           <span class="block">preview</span>
         </div>
       </div>
      </article>
+     <div x-show="open">
     </section>
+  </div>
+<script>
+  function dropHandler(ev) {
+  console.log("File(s) dropped");
+
+  ev.preventDefault();
+
+  if (ev.dataTransfer.items) {
+    [...ev.dataTransfer.items].forEach((item, i) => {
+      if (item.kind === "file") {
+        const file = item.getAsFile();
+        console.log(`… file[${i}].name = ${file.name}`);
+      }
+    });
+  } else {
+    [...ev.dataTransfer.files].forEach((file, i) => {
+      console.log(`… file[${i}].name = ${file.name}`);
+    });
+  }
+}
+
+function dragOverHandler(ev) {
+  console.log("File(s) in drop zone");
+  ev.preventDefault();
+}
+</script>
   </body>
 </html>

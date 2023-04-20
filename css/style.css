@@ -318,6 +318,7 @@ hr.gray{
 #sidebar .selected img{
     filter: brightness(2);
 }
+
 .records_container{
     display: grid;
     grid-gap: 25px;

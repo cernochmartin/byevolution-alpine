@@ -29,38 +29,63 @@
         <script src="/js/utils/intl-tel.js" th:src="@{/js/utils/intl-tel.js}"></script>
         <script src="/js/utils/countries.js" th:src="@{/js/utils/countries.js}"></script>
         <style>
-          #input {
-            width: 700px;
+
+          @media (max-width: 992px){
+            .ndl_logo {
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .anchor {
+              display: none;
+            }
+          }
+       
+          @media (min-width: 1280px) {
+            .hamburger {
+              display: none;
+            }
+            #input {
+              width: 700px;
+            }
+            #pdf {
+              width: 900px;
+            }
           }
 
-          #pdf {
-            width: 900px;
-          }
-
-          .text-box {
-            width: 600px;
-          }
         </style>
 </head>
   <body>
     <nav class="w-auto h-28 shadow bg-white">
-      <div class="flex items-center gap-20 text-3xl pl-10">
-        <img src="/imgs/logos/ndl.png" alt="NDL logo" width="260" />
-        <a href="sign.html">Sign</a>
-        <a href="verify.html">Verify</a>
+      <div class="xl:flex items-center pt-6 gap-20 text-3xl xl:pl-10">
+        <div x-data="{ open: false }">
+        <button @click="open = !open" class="hamburger absolute left-4 top-11">
+          <img src="/imgs/logos/more.svg" alt="Hamburger menu">
+        </button>
+        <div x-show="open">
+          <div class="absolute top-28 bg-white w-full h-40 flex flex-col items-center gap-3 text-gray-400">
+            <a href="sign.html">Sign</a>
+            <hr class="h-0.5 w-32 bg-gray-400">
+            <a href="verify.html">Verify</a>
+            <hr class="h-0.5 w-32 bg-gray-400">
+          </div>
+        </div>
+      </div>
+        <img src="/imgs/logos/ndl.png" class="ndl_logo" alt="NDL logo" width="140" />
+        <a href="sign.html" class="anchor">Sign</a>
+        <a href="verify.html" class="anchor">Verify</a>
       </div>
     </nav>
-     <article class="flex flex-col items-center gap-6 mt-32">
+     <article class="flex flex-col items-center gap-6 mt-16 xl:mt-32">
       <h1 class="!text-5xl">Verify me</h1>
       <input type="file" id="input" class="h-40 bg-white border-cyan-50 border flex items-center justify-center">
-      <button @click="open = ! open" class="text-3xl bg-gray-400 text-white px-16 py-1.5 border-radius">Verify</button>
+      <button @click="open = !open" class="text-3xl bg-gray-400 text-white px-16 py-1.5 border-radius">Verify</button>
      </article>
      <section id="pdf" class="bg-white mx-auto mt-20">
      <h2 class="text-3xl py-4 pl-6">
       Result
     </h2>
     <hr class="h-0.5 mx-2 bg-gray-300">
-     <article class="px-20 pt-6">
+     <article class="px-4 xl:px-20 pt-6">
       <div class="flex">
         <div class="grid grid-cols-2 gap-4">
           <div class="text-gray-500 text-xl">
@@ -89,10 +114,11 @@
             Reason why this person wasn't able to be validated... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
           </p>
         </div>
-          <div class="h-20 w-32 -mt-8 border">logo</div>
+          <div class="max-xl:hidden h-20 w-32 -mt-8 border">logo</div>
         </div>
           <hr class="h-0.5 mt-2 bg-gray-300">
         </div>
+        <div class="xl:hidden h-20 w-32 flex items-center justify-center mx-auto mt-4 border">logo</div>
         <div class="pt-4">
           <div class="flex gap-3">
           <img src="/imgs/logos/check.svg" alt="Check logo" />
@@ -106,10 +132,11 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
           </p>
         </div>
-          <div class="h-20 w-32 -mt-8 border">logo</div>
+          <div class="max-xl:hidden h-20 w-32 -mt-8 border">logo</div>
         </div>
           <hr class="h-0.5 mt-2 bg-gray-300">
         </div>
+        <div class="xl:hidden h-20 w-32 flex items-center justify-center mx-auto mt-4 border">logo</div>
      </article>
     </section>
   </body>
