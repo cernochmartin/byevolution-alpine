@@ -30,6 +30,10 @@
         <script src="/js/utils/countries.js" th:src="@{/js/utils/countries.js}"></script>
         <style>
 
+          a {
+            text-decoration: none !important;
+          }
+
           @media (max-width: 992px){
             .ndl_logo {
               margin-left: auto;
@@ -63,16 +67,19 @@
         </button>
         <div x-show="open">
           <div class="absolute top-28 bg-white w-full h-40 flex flex-col items-center gap-3 text-gray-400">
-            <a href="sign.html">Sign</a>
-            <hr class="h-0.5 w-32 bg-gray-400">
+            <a href="sign.html" class="text-gray-600">Sign</a>
+            <hr class="h-0.5 w-32 bg-gray-600">
             <a href="verify.html">Verify</a>
             <hr class="h-0.5 w-32 bg-gray-400">
           </div>
         </div>
       </div>
         <img src="/imgs/logos/ndl.png" class="ndl_logo" alt="NDL logo" width="140" />
-        <a href="sign.html" class="anchor !text-4xl">Sign</a>
-        <a href="verify.html" class="anchor !text-4xl">Verify</a>
+        <div class="flex flex-col">
+        <a href="sign.html" class="anchor !text-4xl text-gray-600">Sign</a>
+        <hr class="max-xl:hidden h-0.5 w-auto bg-gray-600">
+      </div>
+        <a href="verify.html" class="anchor !text-4xl text-gray-400">Verify</a>
       </div>
     </nav>
      <article class="flex flex-col items-center gap-6 mt-16 xl:mt-32">
